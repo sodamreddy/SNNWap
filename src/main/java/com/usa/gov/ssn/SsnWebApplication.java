@@ -1,4 +1,4 @@
-package com.usa.gov;
+package com.usa.gov.ssn;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
