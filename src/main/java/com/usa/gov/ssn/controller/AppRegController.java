@@ -18,7 +18,7 @@ import com.usa.gov.ssn.service.ApplicationService;
 
 
 
-@Controller
+@Controller("ssnController")
 public class AppRegController {
 	Logger logger = LoggerFactory.getLogger(AppRegController.class);
 	@Autowired(required=true)
@@ -40,7 +40,7 @@ public class AppRegController {
 		model.addAttribute("appModel", appModel);
 		logger.debug("AppController: appRegForm Ended");
 		logger.info("AppController: Registration Form loaded Sucessfully");
-		return "appReg";
+		return "ssn-reg";
 	}
 
 	/**
@@ -50,9 +50,9 @@ public class AppRegController {
 	 * @param model
 	 * @return
 	 */
-	@RequestMapping(value = "/accReg", method = RequestMethod.POST)
-	public String appAccountRegForm(@ModelAttribute("appModel") ApplicationModel appModel, Model model) {
-		logger.debug("ApplicationController: accRegFor() POST method started");
+	@RequestMapping(value = "/appReg", method = RequestMethod.POST)
+	public String appRegForm(@ModelAttribute("appModel") ApplicationModel appModel, Model model) {
+		logger.debug("ApplicationController: appRegFor() POST method started");
 		// get properties
 		Map<String, String> appProps = properties.getProperties();
 		try {
@@ -67,6 +67,6 @@ public class AppRegController {
 		} catch (Exception e) {
 			logger.warn("Registration failed:" + e.getMessage());
 		}
-		return "appReg";
+		return "ssn-reg";
 	}
 }

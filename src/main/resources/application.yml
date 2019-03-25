@@ -1,28 +1,37 @@
 server:
-  port: 2121
+  port: 2122
+  servlet:
+    context-path: /SSN
 logging:
   file: SSN-APP-LOGS.log
   level:
     root: INFO
     com.usa.gov.ssn: DEBUG
-    
+ssn:
+  properties:
+    success: Registratiion Success
+    failed: Registration Failed  
  #Spring 
 spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
   #database configuration
   jpa:
     hibernate:
       ddl-auto: update
-    properties:
+    properties:    
       hibernate:
         show_sql: true
         format_sql: true   
-        dialect:  org.hibernate.dialect.MySQL5Dialect       #org.hibernate.dialect.MySQL5Dialectorg.hibernate.dialect.Oracle10gDialect 
+        dialect:  org.hibernate.dialect.Oracle10gDialect        #org.hibernate.dialect.MySQL5Dialect org.hibernate.dialect.Oracle10gDialect 
   datasource:
-#    username: system
-#    password: pulla143
-#    url: jdbc:oracle:thin:@localhost:1521:xe
-#    driver-class-name: oracle.jdbc.driver.OracleDriver
-    url: jdbc:mysql://localhost:3306/sodam
-    username: root
-    password: pULLA143
-    driver-class-name: com.mysql.jdbc.Driver
+    username: system
+    password: pulla143
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:mysql://localhost:3306/sodam
+#    username: root
+#    password: pULLA143
+#    driver-class-name: com.mysql.jdbc.Driver

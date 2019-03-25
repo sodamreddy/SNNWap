@@ -10,14 +10,14 @@ import com.usa.gov.ssn.repository.ApplicationRegRepository;
 @Service
 public class ApplicationServiceImpl implements ApplicationService {
 	@Autowired(required=true)
-	ApplicationRegRepository repo;
+	ApplicationRegRepository applicationRegRepository;
 	@Override
 	public boolean registerApplicant(ApplicationModel appModel) {
 		ApplicationEntity entity= new ApplicationEntity();
 		//copy model obj props to entity obj
 		BeanUtils.copyProperties(appModel, entity);
 		try {
-			entity=repo.save(entity);
+			entity=applicationRegRepository.save(entity);
 		}catch(Exception e) {
 			return false;
 		}

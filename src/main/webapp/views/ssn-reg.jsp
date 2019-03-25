@@ -16,35 +16,23 @@
 	src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
 <script>
 	$(function() {
-		$('form[id="accRegForm"]').validate({
+		$('form[id="appRegForm"]').validate({
 			rules : {
 				firstName : 'required',
 				lastName : 'required',
 				gender : 'required',
 				ssn : 'required',
 				phoneNo : 'required',
-				role : 'required',
-				emailId : {
-					required : true,
-					emailId : true,
-				},
-				password : {
-					required : true,
-					maxlength : 5,
-				},
+				
 				dateOfBirth : 'required',
 			},//rules
 			messages : {
 				firstName : 'Please enter first name',
 				lastName : 'please enter last name',
-				emailId : 'Please enter a valid email',
-				password : {
-					required : 'Please enter password',
-					minlength : 'Password must be at least 5 characters long'
-				},
+				
 				dateOfBirth : 'Please select date',
 				gender : '     Please select Gender',
-				role : 'Please select a Role',
+			
 				phoneNo : 'Please enter Phone No',
 				ssn : 'Please enter SSN'
 			},//messages
@@ -93,8 +81,8 @@
 	<font color="green">${success}</font>
 	<font color="red">${failed}</font>
 
-	<form:form action="ssnReg" method="POST" id="ssnRegForm"
-		modelAttribute="ssnModel">
+	<form:form action="appReg" method="POST" id="appRegForm"
+		modelAttribute="appModel">
 		<table>
 			<tr>
 				<td>First Name</td>
@@ -118,10 +106,6 @@
 				<td>Email Id</td>
 				<td><form:input path="emailId" />
 				<td><font color='red'><span id="emailMsg"></span></font></td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td><form:password path="password" /></td>
 			</tr>
 			<tr>
 				<td>Phone No</td>

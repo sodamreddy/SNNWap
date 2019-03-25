@@ -1,9 +1,42 @@
 package com.usa.gov.ssn.entity;
 
-import lombok.Data;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 
-@Data
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+@Entity
+@Table(name="User_Applications")
 public class ApplicationEntity {
+	
+	@Column(name="First_Name")
+	private String firstName;
+	
+	@Column(name="Last_name")
+	private String lastName;
+	
+	@Column(name="Date_Of_Birth")
+	private String dateOfBirth;
+	
+	@Column(name="phone_no")
+	private String phoneNo;
+	
+	@Id
+	@SequenceGenerator(name = "gen1", sequenceName="ssn_sequence")
+	@GeneratedValue(generator="gen1",strategy=GenerationType.SEQUENCE)
+	@Column(name="SSN")
+	private long ssn;
+	
+	@Column(name="Email_Id")
+	private String emailId;
+	
+	@Column(name="Gender")
+	private String gender;
 
 	public String getFirstName() {
 		return firstName;
@@ -47,11 +80,5 @@ public class ApplicationEntity {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	private String firstName;
-	private String lastName;
-	private String dateOfBirth;
-	private String phoneNo;
-	private long ssn;
-	private String emailId;
-	private String gender;
+	
 }
