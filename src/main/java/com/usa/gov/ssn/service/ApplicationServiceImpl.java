@@ -59,11 +59,14 @@ public class ApplicationServiceImpl implements ApplicationService {
 	}
 	@Override
 	public Map<String, String> getAllStates() {
+		logger.debug("getAllStates() method execution is started");
 		List<StateEntity> listStates=statesRepository.findAll();
 		Map<String , String> statesMap= new HashMap<String, String>();
 		for (StateEntity stateEntity : listStates) {
 			statesMap.put(stateEntity.getStateCode(), stateEntity.getStateName());
 		}
+		logger.debug("getAllStates() method execution is ended");
+		logger.debug("All state retrive is completed");
 		return statesMap;
 	}
 

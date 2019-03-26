@@ -54,6 +54,10 @@
 			maxDate : new Date(),
 			dateFormat : 'dd/mm/yy'
 		});
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/sodamreddy/SNNWap.git
 	});
 </script>
 </head>
@@ -86,7 +90,6 @@
 			<tr>
 				<td>Email Id</td>
 				<td><form:input path="emailId" />
-				<td><font color='red'><span id="emailMsg"></span></font></td>
 			</tr>
 			<tr>
 			<td>State</td>
@@ -94,6 +97,10 @@
 			<tr>
 				<td>Phone No</td>
 				<td><form:input path="phoneNo" /></td>
+			</tr>
+			<tr>
+			<td>State</td>
+			<td><form:select path="state" items="${statesList}"></form:select></td>
 			</tr>			
 			<tr>
 				<td><input type="reset" value="Reset" /></td>
