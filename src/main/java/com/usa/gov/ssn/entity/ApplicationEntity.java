@@ -5,11 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
 @Entity
 @Table(name="User_Applications")
 public class ApplicationEntity {
@@ -26,9 +22,13 @@ public class ApplicationEntity {
 	@Column(name="phone_no")
 	private String phoneNo;
 	
+//	@Id
+//	@SequenceGenerator(name = "gen1", sequenceName="ssn_sequence")
+//	@GeneratedValue(generator="gen1",strategy=GenerationType.SEQUENCE)
+//	@Column(name="SSN")
+//	private long ssn;
 	@Id
-	@SequenceGenerator(name = "gen1", sequenceName="ssn_sequence")
-	@GeneratedValue(generator="gen1",strategy=GenerationType.SEQUENCE)
+	@GeneratedValue(generator="gen1",strategy=GenerationType.AUTO)
 	@Column(name="SSN")
 	private long ssn;
 	
@@ -37,6 +37,8 @@ public class ApplicationEntity {
 	
 	@Column(name="Gender")
 	private String gender;
+	@Column(name="State")
+	private String state;
 
 	public String getFirstName() {
 		return firstName;
@@ -79,6 +81,12 @@ public class ApplicationEntity {
 	}
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
 	}
 	
 }

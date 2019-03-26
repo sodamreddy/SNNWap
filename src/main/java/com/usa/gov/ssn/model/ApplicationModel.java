@@ -47,6 +47,12 @@ public class ApplicationModel {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
 	private String firstName;
 	private String lastName;
 	private String dateOfBirth;
@@ -54,6 +60,7 @@ public class ApplicationModel {
 	private long ssn;
 	private String emailId;
 	private String gender;
+	private String state;
 
 
 }
