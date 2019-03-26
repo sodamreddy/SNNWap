@@ -54,25 +54,6 @@
 			maxDate : new Date(),
 			dateFormat : 'dd/mm/yy'
 		});
-
-		$("#emailId").blur(function() {
-			var givenEmail = $("#emailId").val();
-			var uri=window.location.href.toString();
-			console.log(uri);
-			$.ajax({
-				url : window.location + "/uniqueMail",
-				data : "emailId=" + givenEmail,
-				success : function(result) {
-					if (result == "Duplicate") {
-						$("#emailMsg").html("Email  Already Exists.!!");
-						$("#emailId").focus();
-					} else {
-						$("#emailMsg").html("");
-					}
-				}
-			});
-			
-		});
 	});
 </script>
 </head>
@@ -107,6 +88,9 @@
 				<td><form:input path="emailId" />
 				<td><font color='red'><span id="emailMsg"></span></font></td>
 			</tr>
+			<tr>
+			<td>State</td>
+			<td><form:select path="state" items="${statesList}"></form:select>
 			<tr>
 				<td>Phone No</td>
 				<td><form:input path="phoneNo" /></td>
