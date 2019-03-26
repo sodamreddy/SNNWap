@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 @Entity
 @Table(name="User_Applications")
@@ -28,7 +29,8 @@ public class ApplicationEntity {
 //	@Column(name="SSN")
 //	private long ssn;
 	@Id
-	@GeneratedValue(generator="gen1",strategy=GenerationType.AUTO)
+	@SequenceGenerator(name = "gen1",sequenceName="ssn_sequence",initialValue=100000000,allocationSize=5)
+	@GeneratedValue(generator="gen1",strategy=GenerationType.SEQUENCE)
 	@Column(name="SSN")
 	private long ssn;
 	

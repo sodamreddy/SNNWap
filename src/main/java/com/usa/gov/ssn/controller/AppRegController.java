@@ -1,5 +1,7 @@
 package com.usa.gov.ssn.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -38,6 +40,7 @@ public class AppRegController {
 		ApplicationModel appModel = new ApplicationModel();
 		// Add AppAccount to Model Scope
 		model.addAttribute("appModel", appModel);
+		initForm(model);
 		logger.debug("AppController: appRegForm Ended");
 		logger.info("AppController: Registration Form loaded Sucessfully");
 		return "ssn-reg";
@@ -55,6 +58,7 @@ public class AppRegController {
 		logger.debug("ApplicationController: appRegFor() POST method started");
 		// get properties
 		Map<String, String> appProps = properties.getProperties();
+		initForm(model);
 		try {
 			// call registerApplicant method
 			boolean isSaved = applicationService.registerApplicant(appModel);
@@ -69,4 +73,17 @@ public class AppRegController {
 		}
 		return "ssn-reg";
 	}
+	private void initForm(Model model) {
+		logger.debug("***SSAController:: initForm() method started***");
+		Map<String, String> statesMap=applicationService.getAllStates();
+		
+		model.addAttribute("statesList", statesMap);
+
+		List<String> gendersList = new ArrayList<>();
+		gendersList.add("Male");
+		gendersList.add("Fe-Male");
+		model.addAttribute("gendersList", gendersList);
+		logger.debug("***SSAController:: initForm() method ended***");
+		logger.info("***genders list and states list generated***");
+}
 }
