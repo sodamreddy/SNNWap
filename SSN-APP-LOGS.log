@@ -1,42 +1,110 @@
-2019-03-27 00:06:07.879  INFO 844 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Starting SsnWebApplication on sodams-MacBook-Air.local with PID 844 (/Users/sodampullareddy/Desktop/SNNWap/target/classes started by sodampullareddy in /Users/sodampullareddy/Desktop/SNNWap)
-2019-03-27 00:06:07.887 DEBUG 844 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
-2019-03-27 00:06:07.890  INFO 844 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : No active profile set, falling back to default profiles: default
-2019-03-27 00:06:08.017  INFO 844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2019-03-27 00:06:08.017  INFO 844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2019-03-27 00:06:09.331  INFO 844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-03-27 00:06:09.459  INFO 844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116ms. Found 2 repository interfaces.
-2019-03-27 00:06:10.043  INFO 844 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e60a8a5d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-03-27 00:06:10.679  INFO 844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2122 (http)
-2019-03-27 00:06:10.714  INFO 844 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-03-27 00:06:10.715  INFO 844 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-03-27 00:06:10.727  INFO 844 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sodampullareddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
-2019-03-27 00:06:11.030  INFO 844 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2019-03-27 00:06:11.036  INFO 844 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/SSN]    : Initializing Spring embedded WebApplicationContext
-2019-03-27 00:06:11.036  INFO 844 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3018 ms
-2019-03-27 00:06:11.330  INFO 844 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-03-27 00:06:11.331  WARN 844 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2019-03-27 00:06:12.165  INFO 844 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-03-27 00:06:12.243  INFO 844 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-04-03 14:26:59.989  INFO 1135 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Starting SsnWebApplication on sodams-MacBook-Air.local with PID 1135 (/Users/sodampullareddy/Desktop/SNNWap/target/classes started by sodampullareddy in /Users/sodampullareddy/Desktop/SNNWap)
+2019-04-03 14:27:00.000 DEBUG 1135 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-03 14:27:00.002  INFO 1135 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : No active profile set, falling back to default profiles: default
+2019-04-03 14:27:00.070  INFO 1135 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-04-03 14:27:00.071  INFO 1135 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-04-03 14:27:00.987  INFO 1135 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-03 14:27:01.072  INFO 1135 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 2 repository interfaces.
+2019-04-03 14:27:01.524  INFO 1135 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5eb19b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-03 14:27:01.992  INFO 1135 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2122 (http)
+2019-04-03 14:27:02.018  INFO 1135 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-03 14:27:02.019  INFO 1135 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-03 14:27:02.027  INFO 1135 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sodampullareddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-03 14:27:02.418  INFO 1135 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-04-03 14:27:02.424  INFO 1135 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/SSN]    : Initializing Spring embedded WebApplicationContext
+2019-04-03 14:27:02.425  INFO 1135 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2353 ms
+2019-04-03 14:27:02.646  INFO 1135 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-03 14:27:02.648  WARN 1135 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-04-03 14:27:03.163  INFO 1135 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-03 14:27:03.214  INFO 1135 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-03-27 00:06:12.370  INFO 844 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
-2019-03-27 00:06:12.373  INFO 844 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-03-27 00:06:12.604  INFO 844 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-03-27 00:06:12.826  INFO 844 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-03-27 00:06:14.013  INFO 844 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-03-27 00:06:14.069  INFO 844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-03-27 00:06:14.758  INFO 844 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-03-27 00:06:14.819  WARN 844 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-03-27 00:06:15.085  INFO 844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2122 (http) with context path '/SSN'
-2019-03-27 00:06:15.088  INFO 844 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Started SsnWebApplication in 7.789 seconds (JVM running for 9.341)
-2019-03-27 00:08:13.453  INFO 844 --- [http-nio-2122-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/SSN]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-03-27 00:08:13.456  INFO 844 --- [http-nio-2122-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-03-27 00:08:13.491  INFO 844 --- [http-nio-2122-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 35 ms
-2019-03-27 00:08:13.623 DEBUG 844 --- [http-nio-2122-exec-3] c.u.gov.ssn.controller.AppRegController  : AppController: appRegForm Started
-2019-03-27 00:08:13.624 DEBUG 844 --- [http-nio-2122-exec-3] c.u.gov.ssn.controller.AppRegController  : AppController: appRegForm Ended
-2019-03-27 00:08:13.625  INFO 844 --- [http-nio-2122-exec-3] c.u.gov.ssn.controller.AppRegController  : AppController: Registration Form loaded Sucessfully
-2019-03-27 00:10:36.447  INFO 844 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-03-27 00:10:36.471  INFO 844 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-03-27 00:10:36.473  INFO 844 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-03-27 00:10:36.484  INFO 844 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-03-27 00:10:36.510  INFO 844 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-03 14:27:03.274  INFO 1135 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-03 14:27:03.276  INFO 1135 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-03 14:27:03.448  INFO 1135 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-03 14:27:03.579  INFO 1135 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-03 14:27:04.264  INFO 1135 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-03 14:27:04.314  WARN 1135 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-04-03 14:27:04.884  INFO 1135 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-03 14:27:04.935  WARN 1135 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-03 14:27:05.233  INFO 1135 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2122 (http) with context path '/SSN'
+2019-04-03 14:27:05.237  INFO 1135 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Started SsnWebApplication in 5.777 seconds (JVM running for 6.83)
+2019-04-03 14:27:51.823  INFO 1135 --- [http-nio-2122-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/SSN]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-04-03 14:27:51.833  INFO 1135 --- [http-nio-2122-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-04-03 14:27:51.878  INFO 1135 --- [http-nio-2122-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 43 ms
+2019-04-03 14:27:51.960 DEBUG 1135 --- [http-nio-2122-exec-1] com.usa.gov.ssn.resource.SSNResource     : SSNResource : validateSSN() started
+2019-04-03 14:27:52.118 DEBUG 1135 --- [http-nio-2122-exec-1] c.u.g.s.service.ApplicationServiceImpl   : ApplicationServiceImpl: validateSSN() executd 
+2019-04-03 14:27:52.119  INFO 1135 --- [http-nio-2122-exec-1] c.u.g.s.service.ApplicationServiceImpl   : SSN retrival completed
+2019-04-03 14:27:52.120 DEBUG 1135 --- [http-nio-2122-exec-1] com.usa.gov.ssn.resource.SSNResource     : validateSSN() method execution is ended
+2019-04-03 14:27:52.120 DEBUG 1135 --- [http-nio-2122-exec-1] com.usa.gov.ssn.resource.SSNResource     : SSN validation is Completed
+2019-04-03 14:31:41.399 DEBUG 1135 --- [http-nio-2122-exec-3] com.usa.gov.ssn.resource.SSNResource     : SSNResource : validateSSN() started
+2019-04-03 14:31:41.413 DEBUG 1135 --- [http-nio-2122-exec-3] c.u.g.s.service.ApplicationServiceImpl   : ApplicationServiceImpl: validateSSN() executd 
+2019-04-03 14:31:41.414  INFO 1135 --- [http-nio-2122-exec-3] c.u.g.s.service.ApplicationServiceImpl   : SSN retrival completed
+2019-04-03 14:31:41.414 DEBUG 1135 --- [http-nio-2122-exec-3] com.usa.gov.ssn.resource.SSNResource     : validateSSN() method execution is ended
+2019-04-03 14:31:41.414 DEBUG 1135 --- [http-nio-2122-exec-3] com.usa.gov.ssn.resource.SSNResource     : SSN validation is Completed
+2019-04-03 14:57:04.259  INFO 1135 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-04-03 14:57:04.285  INFO 1135 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-03 14:57:04.287  INFO 1135 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-03 14:57:04.301  INFO 1135 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-03 14:57:04.319  INFO 1135 --- [RMI TCP Connection(2)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-03 14:57:41.073  INFO 1217 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Starting SsnWebApplication on sodams-MacBook-Air.local with PID 1217 (/Users/sodampullareddy/Desktop/SNNWap/target/classes started by sodampullareddy in /Users/sodampullareddy/Desktop/SNNWap)
+2019-04-03 14:57:41.078 DEBUG 1217 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-03 14:57:41.079  INFO 1217 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : No active profile set, falling back to default profiles: default
+2019-04-03 14:57:41.139  INFO 1217 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-04-03 14:57:41.140  INFO 1217 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-04-03 14:57:42.086  INFO 1217 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-03 14:57:42.173  INFO 1217 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 2 repository interfaces.
+2019-04-03 14:57:42.654  INFO 1217 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c265f041] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-03 14:57:43.099  INFO 1217 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2122 (http)
+2019-04-03 14:57:43.125  INFO 1217 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-03 14:57:43.125  INFO 1217 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-03 14:57:43.134  INFO 1217 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/sodampullareddy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-04-03 14:57:43.424  INFO 1217 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-04-03 14:57:43.430  INFO 1217 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/SSN]    : Initializing Spring embedded WebApplicationContext
+2019-04-03 14:57:43.431  INFO 1217 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2290 ms
+2019-04-03 14:57:43.651  INFO 1217 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-04-03 14:57:43.653  WARN 1217 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-04-03 14:57:44.127  INFO 1217 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-04-03 14:57:44.179  INFO 1217 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-03 14:57:44.263  INFO 1217 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2019-04-03 14:57:44.267  INFO 1217 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-04-03 14:57:44.446  INFO 1217 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-04-03 14:57:44.586  INFO 1217 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-03 14:57:45.256  INFO 1217 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-03 14:57:45.303  INFO 1217 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-04-03 14:57:45.945  INFO 1217 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-03 14:57:45.985  WARN 1217 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-03 14:57:46.274  INFO 1217 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2122 (http) with context path '/SSN'
+2019-04-03 14:57:46.278  INFO 1217 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Started SsnWebApplication in 5.734 seconds (JVM running for 6.748)
+2019-04-03 14:58:08.801  INFO 1217 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-04-03 14:58:08.811  INFO 1217 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-04-03 14:58:08.817  INFO 1217 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-04-03 14:58:08.846  INFO 1217 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-04-03 14:58:09.306  INFO 1217 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Starting SsnWebApplication on sodams-MacBook-Air.local with PID 1217 (/Users/sodampullareddy/Desktop/SNNWap/target/classes started by sodampullareddy in /Users/sodampullareddy/Desktop/SNNWap)
+2019-04-03 14:58:09.306 DEBUG 1217 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2019-04-03 14:58:09.306  INFO 1217 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : No active profile set, falling back to default profiles: default
+2019-04-03 14:58:09.704  INFO 1217 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-04-03 14:58:09.733  INFO 1217 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 2 repository interfaces.
+2019-04-03 14:58:09.842  INFO 1217 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c265f041] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-04-03 14:58:10.023  INFO 1217 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 2122 (http)
+2019-04-03 14:58:10.025  INFO 1217 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-04-03 14:58:10.026  INFO 1217 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-04-03 14:58:10.216  INFO 1217 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-04-03 14:58:10.219  INFO 1217 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/SSN]    : Initializing Spring embedded WebApplicationContext
+2019-04-03 14:58:10.219  INFO 1217 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 910 ms
+2019-04-03 14:58:10.358  INFO 1217 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-04-03 14:58:10.359  WARN 1217 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-04-03 14:58:10.394  INFO 1217 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-04-03 14:58:10.404  INFO 1217 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-04-03 14:58:10.420  INFO 1217 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-04-03 14:58:10.526  INFO 1217 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-04-03 14:58:10.570  INFO 1217 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-04-03 14:58:10.841  INFO 1217 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-04-03 14:58:10.852  WARN 1217 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-04-03 14:58:10.999  INFO 1217 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 2122 (http) with context path '/SSN'
+2019-04-03 14:58:11.000  INFO 1217 --- [restartedMain] com.usa.gov.ssn.SsnWebApplication        : Started SsnWebApplication in 1.745 seconds (JVM running for 31.47)
+2019-04-03 14:58:11.009  INFO 1217 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

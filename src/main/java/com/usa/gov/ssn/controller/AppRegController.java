@@ -43,7 +43,7 @@ public class AppRegController {
 		initForm(model);
 		logger.debug("AppController: appRegForm Ended");
 		logger.info("AppController: Registration Form loaded Sucessfully");
-		return "ssn-reg";
+		return "ssn_reg";
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class AppRegController {
 		} catch (Exception e) {
 			logger.warn("Registration failed:" + e.getMessage());
 		}
-		return "ssn-reg";
+		return "ssn_reg";
 	}
 	private void initForm(Model model) {
 		logger.debug("***SSAController:: initForm() method started***");

@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
 
 <meta charset="ISO-8859-1">
-<title>SSN Registration</title>
+<title>Account Registration</title>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -21,20 +21,21 @@
 				firstName : 'required',
 				lastName : 'required',
 				gender : 'required',
-				ssn : 'required',
 				phoneNo : 'required',
-				
+				emailId : 'required',
 				dateOfBirth : 'required',
 			},//rules
 			messages : {
 				firstName : 'Please enter first name',
 				lastName : 'please enter last name',
-				
+				emailId : 'Please enter a valid email',
+				password : {
+					required : 'Please enter password',
+					minlength : 'Password must be at least 5 characters long'
+				},
 				dateOfBirth : 'Please select date',
 				gender : '     Please select Gender',
-			
 				phoneNo : 'Please enter Phone No',
-				ssn : 'Please enter SSN'
 			},//messages
 			errorPlacement : function(error, element) {
 				if (element.is(":radio")) {
@@ -54,15 +55,30 @@
 			maxDate : new Date(),
 			dateFormat : 'dd/mm/yy'
 		});
-<<<<<<< HEAD
-=======
 
->>>>>>> branch 'master' of https://github.com/sodamreddy/SNNWap.git
+		$("#emailId").blur(function() {
+			var givenEmail = $("#emailId").val();
+			var uri=window.location.href.toString();
+			console.log(uri);
+			$.ajax({
+				url : window.location + "/uniqueMail",
+				data : "emailId=" + givenEmail,
+				success : function(result) {
+					if (result == "Duplicate") {
+						$("#emailMsg").html("Email  Already Exists.!!");
+						$("#emailId").focus();
+					} else {
+						$("#emailMsg").html("");
+					}
+				}
+			});
+			
+		});
 	});
 </script>
 </head>
 <body>
-	<h1>SSN Registration Form</h1>
+	<h1>SSN Enrollment</h1>
 	<font color="green">${success}</font>
 	<font color="red">${failed}</font>
 
@@ -92,19 +108,17 @@
 				<td><form:input path="emailId" />
 			</tr>
 			<tr>
-			<td>State</td>
-			<td><form:select path="state" items="${statesList}"></form:select>
-			<tr>
 				<td>Phone No</td>
 				<td><form:input path="phoneNo" /></td>
 			</tr>
+			
 			<tr>
-			<td>State</td>
-			<td><form:select path="state" items="${statesList}"></form:select></td>
-			</tr>			
+				<td>State</td>
+				<td><form:select path="state" items="${statesList}"></form:select>
+			</tr>
 			<tr>
 				<td><input type="reset" value="Reset" /></td>
-				<td><input type="Submit" value="Register" id="submit"/></td>
+				<td><input type="Submit" value="Enroll" id="submit"/></td>
 			</tr>
 		</table>
 	</form:form>
